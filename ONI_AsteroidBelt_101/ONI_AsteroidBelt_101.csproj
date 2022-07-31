@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2336D9C8-6450-419B-BD24-6D1EAFD5BCE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ONI_AsteroidBelt_101</RootNamespace>
+    <AssemblyName>ONI_AsteroidBelt_101</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\System mirror image\Documents\Klei\OxygenNotIncluded\mods\dev\AsteroidBelt_101\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PLib, Version=4.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PLib.4.9.0\lib\net471\PLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\SteamLibrary\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WLog">
+      <HintPath>..\..\..\..\Introduces\WLog\WLog.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonData\CommomDataLoad.cs" />
+    <Compile Include="Common\CommonData\DataManager.cs" />
+    <Compile Include="Common\CommonData\HabitatConfigs\ConfigFile.cs" />
+    <Compile Include="Common\CommonData\HabitatConfigs\HabitatLoad.cs" />
+    <Compile Include="Common\CommonData\HabitatConfigs\HabitatData.cs" />
+    <Compile Include="Common\CommonData\HabitatConfigs\Patch.cs" />
+    <Compile Include="Common\CommonData\NoseconeConfigs\ConfigFile.cs" />
+    <Compile Include="Common\CommonData\NoseconeConfigs\Patch.cs" />
+    <Compile Include="Common\Configs.cs" />
+    <Compile Include="Common\Entrance.cs" />
+    <Compile Include="Common\FileLoader.cs" />
+    <Compile Include="Common\StringsInjecter.cs" />
+    <Compile Include="Loger\Log.cs" />
+    <Compile Include="Loger\LogLevel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\OptionMenuForPLib.cs" />
+    <Compile Include="UI\UIPatch.cs" />
+    <Compile Include="WorldBuilder\Common\BiomeDiscribe\Band.cs" />
+    <Compile Include="WorldBuilder\Common\BiomeDiscribe\BaseBiome.cs" />
+    <Compile Include="WorldBuilder\Common\BiomeDiscribe\BaseBiomeData.cs" />
+    <Compile Include="WorldBuilder\Common\Biome\BiomeBehaviorPattern.cs" />
+    <Compile Include="WorldBuilder\Common\Biome\BiomeLocationPattern.cs" />
+    <Compile Include="WorldBuilder\Common\Biome\CommonBiome.cs" />
+    <Compile Include="WorldBuilder\Common\Biome\CommonBiomeData.cs" />
+    <Compile Include="WorldBuilder\Common\Items\Critter.cs" />
+    <Compile Include="WorldBuilder\Common\Items\Template.cs" />
+    <Compile Include="WorldBuilder\Common\Items\Things.cs" />
+    <Compile Include="WorldBuilder\Common\WorldDiscribe\BaseCluster.cs" />
+    <Compile Include="WorldBuilder\Common\WorldDiscribe\BasepoiData.cs" />
+    <Compile Include="WorldBuilder\Common\WorldDiscribe\BaseWorld.cs" />
+    <Compile Include="WorldBuilder\Common\WorldDiscribe\BaseWorldData.cs" />
+    <Compile Include="WorldBuilder\Common\World\CommonWorld.cs" />
+    <Compile Include="WorldBuilder\Common\World\CommonWorldData.cs" />
+    <Compile Include="WorldBuilder\Common\World\StartWorld.cs" />
+    <Compile Include="WorldBuilder\Common\World\StartWorldData.cs" />
+    <Compile Include="WorldBuilder\ConfigData.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\BiomeSetter.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\CellsSeparater.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\CritterPlacer.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\NoiseMapper.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\TempelateMananger.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\TerrainSetter.cs" />
+    <Compile Include="WorldBuilder\Creator\CreatActions\WorldBorderManager.cs" />
+    <Compile Include="WorldBuilder\Creator\Creator.cs" />
+    <Compile Include="WorldBuilder\Creator\Patch.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\BiomeSetter.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleAquaticBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleBarrenBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleForestBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleFrozenBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleHotMarshBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleJungleBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleMagmaBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleMetallicBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleMiscBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleNiobiumBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleOceanBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleOilBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleRadioactiveBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleRustBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleSandStoneBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleSwampBiome.cs" />
+    <Compile Include="WorldBuilder\Data\BiomeData\Biomes\LittleWastelandBiome.cs" />
+    <Compile Include="WorldBuilder\Data\ClusterData\DefaultCluster.cs" />
+    <Compile Include="WorldBuilder\Data\FileManager\FileCreater.cs" />
+    <Compile Include="WorldBuilder\Data\FileManager\FileLoad.cs" />
+    <Compile Include="WorldBuilder\Data\FileManager\WorldFileFormaterExtension.cs" />
+    <Compile Include="WorldBuilder\Data\Patch.cs" />
+    <Compile Include="WorldBuilder\Data\WorldBuilderDataLoad.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleForest.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleHotMarsh.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleJungle.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleMagma.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleOcean.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleOil.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleRadioactive.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleRust.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleSwamp.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltLittleWasteland.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\AsteroidBeltSandStoneStart.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\StartWorldSetter.cs" />
+    <Compile Include="WorldBuilder\Data\WorldData\Worlds\WorldSetter.cs" />
+    <Compile Include="WorldBuilder\WorldBuilderLoad.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
